@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         i18nHelper = require('./lib/i18nHelper').init(grunt),
         _ = require('lodash');
 
-    grunt.registerMultiTask('simple_i18n', '', function() {
+    grunt.registerMultiTask('simpleI18n', '', function() {
 
         this.files.forEach(function(file) {
 
