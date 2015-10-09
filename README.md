@@ -36,13 +36,13 @@ simple_i18n: {
 
 ### Templates
 
-```html
+```js
 <button>[[ change ]]</button>
 ```
 
 You can also use namespaces
 
-´´´html
+```js
 <button>[[ filter:change ]]</button>
 ```
 
@@ -54,7 +54,7 @@ This Task only supports json-files.
 
 ```json
 {
-    "CHANGE" : 'Change Image'
+    "CHANGE" : "Change Image"
 }
 
 ```
@@ -69,3 +69,7 @@ First Part of a Filename is the language. The Second is the Namespace, if you us
 /translation/en.json
 /translation/en.filter.json
 ```
+
+### License
+
+Copyright (c) 2015 Björn Hase under the MIT license
