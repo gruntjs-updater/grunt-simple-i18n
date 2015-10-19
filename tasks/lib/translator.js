@@ -14,7 +14,8 @@ exports.init = function(grunt) {
 
     exports.replace = function(i18n, content) {
         return content.replace(/\[\[.+\]\]/g, function(match) {
-            var keys = match.replace('[[', '').replace(']]', '').split(':'),
+            var key = match.replace('[[', '').replace(']]', '');
+                keys = key.split(':'),
                 value = '';
 
             // check if namespace is there if not set to "default"
@@ -29,8 +30,11 @@ exports.init = function(grunt) {
             keys[1] = keys[1].trim();
 
             // check for keys in i18n
+            // if not found get ERROR message with key
             if (i18n[keys[0]][keys[1]] !== undefined) {
                 value = i18n[keys[0]][keys[1]];
+            } else {
+                value = '[[ ERROR - Translation not found - ' + key + ' ]]';
             }
 
             return value;

@@ -70,6 +70,10 @@ First Part of a Filename is the language. The Second is the Namespace, if you us
 /translation/en.filter.json
 ```
 
+## History
+
+19.10.2015 - Adding Error Message if Translation was not found
+
 ### License
 
 Copyright (c) 2015 Björn Hase under the MIT license
