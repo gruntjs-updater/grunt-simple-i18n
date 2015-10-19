@@ -14,7 +14,7 @@ exports.init = function(grunt) {
 
     exports.replace = function(i18n, content) {
         return content.replace(/\[\[.+\]\]/g, function(match) {
-            var key = match.replace('[[', '').replace(']]', '');
+            var key = match.replace('[[', '').replace(']]', ''),
                 keys = key.split(':'),
                 value = '';
 
